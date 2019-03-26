@@ -10,7 +10,7 @@ class Infantry: public Unit {
 
 };
 
-class Archery: public Unit {
+class Archer: public Unit {
 
 };
 
@@ -26,11 +26,11 @@ class OrcInfantry: public Infantry {
 
 };
 
-class HumanArchery: public Archery {
+class HumanArcher: public Archer {
 
 };
 
-class OrcArchery: public Archery {
+class OrcArcher: public Archer {
 
 };
 
