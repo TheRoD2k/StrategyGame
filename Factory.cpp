@@ -6,10 +6,16 @@
 #include <vector>
 
 class ArmyFactory {
+private:
+    int _x;
+    int _y;
+    const int _cost;
 public:
-    virtual Infantry* CreateInfantry(int) = 0;
-    virtual Archer* CreateArcher(int) = 0;
-    virtual Magician* CreateMagician(int) = 0;
+    ArmyFactory() = delete;
+
+    virtual Infantry* CreateInfantry() = 0;
+    virtual Archer* CreateArcher() = 0;
+    virtual Magician* CreateMagician() = 0;
 
 };
 
@@ -21,19 +27,31 @@ class OrcArmyFactory: public ArmyFactory {
 
 };
 
-class HumanArcheryFactory: public HumanArmyFactory {
-
+class HumanArcherFactory: public HumanArmyFactory {
+public:
+    Archer* CreateArcher() final {
+        auto* unit = new HumanArcher();
+        return unit;
+    }
 };
 
 class HumanInfantryFactory: public HumanArmyFactory {
-
+public:
+    Infantry* CreateInfantry() final {
+        auto* unit = new HumanInfantry();
+        return unit;
+    }
 };
 
 class HumanMagicianFactory: public HumanArmyFactory {
-
+public:
+    Magician* CreateMagician() final {
+        auto* unit = new HumanMagician();
+        return unit;
+    }
 };
 
-class OrcArcheryFactory: public OrcArmyFactory {
+class OrcArcherFactory: public OrcArmyFactory {
 
 };
 
@@ -51,23 +69,31 @@ private:
     std::vector<Archer*> _m_archer;
     std::vector<Magician*> _m_magician;
 public:
-    void AddInfantry(ArmyFactory& factory, int amount);
-    void AddArcher(ArmyFactory& factory, int amount);
-    void AddMagician(ArmyFactory& factory, int amount);
+    void AddInfantry(ArmyFactory& factory);
+    void AddArcher(ArmyFactory& factory);
+    void AddMagician(ArmyFactory& factory);
 
 };
 
 // Добавляем юнитов в армию
 
-void Army::AddInfantry(ArmyFactory& factory, int amount) {
-    _m_infantry.push_back(factory.CreateInfantry(amount));
+void Army::AddInfantry(ArmyFactory& factory) {
+    _m_infantry.push_back(factory.CreateInfantry());
 }
 
-void Army::AddArcher(ArmyFactory& factory, int amount) {
-    _m_archer.push_back(factory.CreateArcher(amount));
+void Army::AddArcher(ArmyFactory& factory) {
+    _m_archer.push_back(factory.CreateArcher());
 }
 
-void Army::AddMagician(ArmyFactory& factory, int amount) {
-    _m_magician.push_back(factory.CreateMagician(amount));
+void Army::AddMagician(ArmyFactory& factory) {
+    _m_magician.push_back(factory.CreateMagician());
 }
 
+
+class HumanArmy: public Army {
+
+};
+
+class OrcArmy: public Army {
+
+};

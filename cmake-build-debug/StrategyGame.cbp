@@ -87,6 +87,9 @@
 		<Unit filename="/home/alexander/Workspace/StrategyGame/Factory.cpp">
 			<Option target="StrategyGame"/>
 		</Unit>
+		<Unit filename="/home/alexander/Workspace/StrategyGame/Player.cpp">
+			<Option target="StrategyGame"/>
+		</Unit>
 		<Unit filename="/home/alexander/Workspace/StrategyGame/Unit.cpp">
 			<Option target="StrategyGame"/>
 		</Unit>

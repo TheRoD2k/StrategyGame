@@ -3,4 +3,4 @@ project(StrategyGame)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(StrategyGame main.cpp Factory.cpp Unit.cpp)
+add_executable(StrategyGame main.cpp Factory.cpp Unit.cpp Player.cpp)

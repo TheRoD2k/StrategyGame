@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/StrategyGame.dir/main.cpp.o CMakeFiles/StrategyGame.dir/Factory.cpp.o CMakeFiles/StrategyGame.dir/Unit.cpp.o  -o StrategyGame 
+/usr/bin/c++  -g   CMakeFiles/StrategyGame.dir/main.cpp.o CMakeFiles/StrategyGame.dir/Factory.cpp.o CMakeFiles/StrategyGame.dir/Unit.cpp.o CMakeFiles/StrategyGame.dir/Player.cpp.o  -o StrategyGame 
