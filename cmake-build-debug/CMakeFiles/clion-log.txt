@@ -1,4 +1,4 @@
-/home/frozenice/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/frozenice/Desktop/Repo/StrategyGame
+/snap/clion/67/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alexander/Workspace/StrategyGame
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug
+-- Build files have been written to: /home/alexander/Workspace/StrategyGame/cmake-build-debug

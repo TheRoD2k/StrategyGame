@@ -1,4 +1,4 @@
-# Install script for directory: /home/frozenice/Desktop/Repo/StrategyGame
+# Install script for directory: /home/alexander/Workspace/StrategyGame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alexander/Workspace/StrategyGame/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
