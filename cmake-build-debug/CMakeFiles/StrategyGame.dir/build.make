@@ -70,62 +70,17 @@ CMakeFiles/StrategyGame.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StrategyGame.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/Workspace/StrategyGame/main.cpp -o CMakeFiles/StrategyGame.dir/main.cpp.s
 
-CMakeFiles/StrategyGame.dir/Factory.cpp.o: CMakeFiles/StrategyGame.dir/flags.make
-CMakeFiles/StrategyGame.dir/Factory.cpp.o: ../Factory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/StrategyGame.dir/Factory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/StrategyGame.dir/Factory.cpp.o -c /home/alexander/Workspace/StrategyGame/Factory.cpp
-
-CMakeFiles/StrategyGame.dir/Factory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StrategyGame.dir/Factory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexander/Workspace/StrategyGame/Factory.cpp > CMakeFiles/StrategyGame.dir/Factory.cpp.i
-
-CMakeFiles/StrategyGame.dir/Factory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StrategyGame.dir/Factory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/Workspace/StrategyGame/Factory.cpp -o CMakeFiles/StrategyGame.dir/Factory.cpp.s
-
-CMakeFiles/StrategyGame.dir/Unit.cpp.o: CMakeFiles/StrategyGame.dir/flags.make
-CMakeFiles/StrategyGame.dir/Unit.cpp.o: ../Unit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/StrategyGame.dir/Unit.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/StrategyGame.dir/Unit.cpp.o -c /home/alexander/Workspace/StrategyGame/Unit.cpp
-
-CMakeFiles/StrategyGame.dir/Unit.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StrategyGame.dir/Unit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexander/Workspace/StrategyGame/Unit.cpp > CMakeFiles/StrategyGame.dir/Unit.cpp.i
-
-CMakeFiles/StrategyGame.dir/Unit.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StrategyGame.dir/Unit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/Workspace/StrategyGame/Unit.cpp -o CMakeFiles/StrategyGame.dir/Unit.cpp.s
-
-CMakeFiles/StrategyGame.dir/Player.cpp.o: CMakeFiles/StrategyGame.dir/flags.make
-CMakeFiles/StrategyGame.dir/Player.cpp.o: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StrategyGame.dir/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/StrategyGame.dir/Player.cpp.o -c /home/alexander/Workspace/StrategyGame/Player.cpp
-
-CMakeFiles/StrategyGame.dir/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StrategyGame.dir/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexander/Workspace/StrategyGame/Player.cpp > CMakeFiles/StrategyGame.dir/Player.cpp.i
-
-CMakeFiles/StrategyGame.dir/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StrategyGame.dir/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexander/Workspace/StrategyGame/Player.cpp -o CMakeFiles/StrategyGame.dir/Player.cpp.s
-
 # Object files for target StrategyGame
 StrategyGame_OBJECTS = \
-"CMakeFiles/StrategyGame.dir/main.cpp.o" \
-"CMakeFiles/StrategyGame.dir/Factory.cpp.o" \
-"CMakeFiles/StrategyGame.dir/Unit.cpp.o" \
-"CMakeFiles/StrategyGame.dir/Player.cpp.o"
+"CMakeFiles/StrategyGame.dir/main.cpp.o"
 
 # External object files for target StrategyGame
 StrategyGame_EXTERNAL_OBJECTS =
 
 StrategyGame: CMakeFiles/StrategyGame.dir/main.cpp.o
-StrategyGame: CMakeFiles/StrategyGame.dir/Factory.cpp.o
-StrategyGame: CMakeFiles/StrategyGame.dir/Unit.cpp.o
-StrategyGame: CMakeFiles/StrategyGame.dir/Player.cpp.o
 StrategyGame: CMakeFiles/StrategyGame.dir/build.make
 StrategyGame: CMakeFiles/StrategyGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable StrategyGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable StrategyGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StrategyGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

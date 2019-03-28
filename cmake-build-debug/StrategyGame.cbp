@@ -84,13 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alexander/Workspace/StrategyGame/Factory.cpp">
+		<Unit filename="/home/alexander/Workspace/StrategyGame/Army.h">
 			<Option target="StrategyGame"/>
 		</Unit>
-		<Unit filename="/home/alexander/Workspace/StrategyGame/Player.cpp">
+		<Unit filename="/home/alexander/Workspace/StrategyGame/Factory.h">
 			<Option target="StrategyGame"/>
 		</Unit>
-		<Unit filename="/home/alexander/Workspace/StrategyGame/Unit.cpp">
+		<Unit filename="/home/alexander/Workspace/StrategyGame/Player.h">
+			<Option target="StrategyGame"/>
+		</Unit>
+		<Unit filename="/home/alexander/Workspace/StrategyGame/Unit.h">
 			<Option target="StrategyGame"/>
 		</Unit>
 		<Unit filename="/home/alexander/Workspace/StrategyGame/main.cpp">

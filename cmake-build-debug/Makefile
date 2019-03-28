@@ -123,87 +123,6 @@ StrategyGame/fast:
 	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/build
 .PHONY : StrategyGame/fast
 
-Factory.o: Factory.cpp.o
-
-.PHONY : Factory.o
-
-# target to build an object file
-Factory.cpp.o:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Factory.cpp.o
-.PHONY : Factory.cpp.o
-
-Factory.i: Factory.cpp.i
-
-.PHONY : Factory.i
-
-# target to preprocess a source file
-Factory.cpp.i:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Factory.cpp.i
-.PHONY : Factory.cpp.i
-
-Factory.s: Factory.cpp.s
-
-.PHONY : Factory.s
-
-# target to generate assembly for a file
-Factory.cpp.s:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Factory.cpp.s
-.PHONY : Factory.cpp.s
-
-Player.o: Player.cpp.o
-
-.PHONY : Player.o
-
-# target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Player.cpp.o
-.PHONY : Player.cpp.o
-
-Player.i: Player.cpp.i
-
-.PHONY : Player.i
-
-# target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Player.cpp.i
-.PHONY : Player.cpp.i
-
-Player.s: Player.cpp.s
-
-.PHONY : Player.s
-
-# target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Player.cpp.s
-.PHONY : Player.cpp.s
-
-Unit.o: Unit.cpp.o
-
-.PHONY : Unit.o
-
-# target to build an object file
-Unit.cpp.o:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.o
-.PHONY : Unit.cpp.o
-
-Unit.i: Unit.cpp.i
-
-.PHONY : Unit.i
-
-# target to preprocess a source file
-Unit.cpp.i:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.i
-.PHONY : Unit.cpp.i
-
-Unit.s: Unit.cpp.s
-
-.PHONY : Unit.s
-
-# target to generate assembly for a file
-Unit.cpp.s:
-	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.s
-.PHONY : Unit.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -240,14 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... StrategyGame"
 	@echo "... edit_cache"
-	@echo "... Factory.o"
-	@echo "... Factory.i"
-	@echo "... Factory.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Unit.o"
-	@echo "... Unit.i"
-	@echo "... Unit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
