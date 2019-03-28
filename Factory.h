@@ -9,13 +9,11 @@
 #include <vector>
 
 class ArmyFactory {
-private:
+protected:
     int _x;
     int _y;
-    const int _cost;
+    int _cost;
 public:
-    ArmyFactory() = delete;
-
     virtual Infantry* CreateInfantry() = 0;
     virtual Archer* CreateArcher() = 0;
     virtual Magician* CreateMagician() = 0;
@@ -24,6 +22,12 @@ public:
 
 class HumanArmyFactory: public ArmyFactory {
 public:
+    explicit HumanArmyFactory(int x=0, int y=0, int cost=0) {
+        _x = x;
+        _y = y;
+        _cost = cost;
+    }
+
     Archer* CreateArcher() final {
         auto* unit = new HumanArcher();
         return unit;

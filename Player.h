@@ -33,11 +33,12 @@ public:
 
     void Show() {
         std::cout << _race << '\n' << _money << std::endl;
+        _army ->ShowUnits();
     }
     // Действия с армией
-    void AddUnit(ArmyFactory& factory);
+    void AddUnit(ArmyFactory& factory, const std::string& unit_type);
 
-    void AddFactory(std::string factory_name);
+    void AddFactory();
 
     void RemoveUnit(int unit_id=0);
 
@@ -45,8 +46,22 @@ public:
 
 };
 
-void Player::AddUnit(ArmyFactory &factory) {
+void Player::AddUnit(ArmyFactory &factory, const std::string& unit_type) {
+    if (unit_type == "infantry")
+        _army ->AddInfantry(factory);
+    if (unit_type == "archer")
+        _army ->AddArcher(factory);
+    if (unit_type == "magician")
+        _army ->AddMagician(factory);
+}
 
+void Player::AddFactory() {
+    ArmyFactory* factory;
+    if (_race == "human")
+        factory = new HumanArmyFactory;
+    else
+        factory = new OrcArmyFactory;
+    _factories.push_back(factory);
 }
 
 #endif //STRATEGYGAME_PLAYER_H
