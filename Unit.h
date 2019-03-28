@@ -1,15 +1,16 @@
 //
-
-// Created by frozenice on 3/27/19.
+// Created by alexander on 28.03.19.
 //
+
+#ifndef STRATEGYGAME_UNIT_H
+#define STRATEGYGAME_UNIT_H
 
 #include <cmath>
 
 class Unit
 {
 public:
-    Unit();
-    virtual ~Unit();
+    virtual ~Unit() = default;
 
     void TakeDamage(int damage);    // Получить урон с учетом брони
     int GetDamage() const;  // Показывает, сколько урона наносит юнит
@@ -21,8 +22,9 @@ public:
     int GetPrice() const;
 private:
     int _hp, _damage, _armor,
-    _cost, _range, _x, _y;
+            _cost, _range, _x, _y;
 };
+
 
 void Unit::TakeDamage(int damage)
 {
@@ -57,7 +59,7 @@ bool Unit::GetY() const
 bool Unit::IsReachable(Unit &enemy) const
 {
     int dx = std::abs(_x - enemy.GetX()),
-        dy = std::abs(_y - enemy.GetY());
+            dy = std::abs(_y - enemy.GetY());
     return _range >= std::round(std::sqrt(dx*dx + dy*dy) - 0.5);
 }
 
@@ -129,3 +131,5 @@ class OrcMagician : public Magician
 public:
 private:
 };
+
+#endif //STRATEGYGAME_UNIT_H
