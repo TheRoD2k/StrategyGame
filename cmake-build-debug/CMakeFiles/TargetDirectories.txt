@@ -1,3 +1,0 @@
-/home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles/StrategyGame.dir
-/home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles/edit_cache.dir
