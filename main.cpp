@@ -1,12 +1,10 @@
 #include <iostream>
 #include "Player.h"
 #include "Army.h"
+#include "Map.h"
+#include "Unit.h"
 
-int main() {
-    Player player1("human");
-    HumanArmyFactory factory;
-    player1.AddUnit(factory, "infantry");
-    player1.Show();
-
+int main()
+{
     return 0;
 }

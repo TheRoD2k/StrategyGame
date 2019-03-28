@@ -46,6 +46,7 @@ public:
 
 };
 
+
 void Player::AddUnit(ArmyFactory &factory, const std::string& unit_type) {
     if (unit_type == "infantry")
         _army ->AddInfantry(factory);

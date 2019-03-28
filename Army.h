@@ -16,6 +16,7 @@ public:
     void AddArcher(ArmyFactory& factory);
     void AddMagician(ArmyFactory& factory);
 
+
     void ShowUnits();
 };
 
@@ -24,6 +25,7 @@ void Army::ShowUnits() {
         _units[i] ->Show();
     }
 }
+
 // Добавляем юнитов в армию
 
 void Army::AddInfantry(ArmyFactory& factory) {

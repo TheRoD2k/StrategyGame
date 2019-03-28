@@ -10,7 +10,6 @@
 class Unit
 {
 public:
-
     void TakeDamage(int damage);    // Получить урон с учетом брони
     int GetDamage() const;  // Показывает, сколько урона наносит юнит
     bool IsAlive() const;
@@ -25,7 +24,6 @@ protected:
     int _hp, _damage, _armor,
             _cost, _range, _x, _y;
 };
-
 
 
 void Unit::TakeDamage(int damage)
