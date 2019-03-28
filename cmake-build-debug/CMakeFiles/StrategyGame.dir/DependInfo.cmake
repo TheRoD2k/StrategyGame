@@ -4,9 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alexander/Workspace/StrategyGame/Factory.cpp" "/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles/StrategyGame.dir/Factory.cpp.o"
-  "/home/alexander/Workspace/StrategyGame/Player.cpp" "/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles/StrategyGame.dir/Player.cpp.o"
-  "/home/alexander/Workspace/StrategyGame/Unit.cpp" "/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles/StrategyGame.dir/Unit.cpp.o"
   "/home/alexander/Workspace/StrategyGame/main.cpp" "/home/alexander/Workspace/StrategyGame/cmake-build-debug/CMakeFiles/StrategyGame.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

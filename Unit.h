@@ -1,15 +1,15 @@
 //
-
-// Created by frozenice on 3/27/19.
+// Created by alexander on 28.03.19.
 //
+
+#ifndef STRATEGYGAME_UNIT_H
+#define STRATEGYGAME_UNIT_H
 
 #include <cmath>
 
 class Unit
 {
 public:
-    Unit();
-    virtual ~Unit();
 
     void TakeDamage(int damage);    // Получить урон с учетом брони
     int GetDamage() const;  // Показывает, сколько урона наносит юнит
@@ -19,10 +19,14 @@ public:
     bool IsReachable(Unit &enemy) const;   // True, если на расстоянии атаки
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
-private:
+    virtual void Show() = 0;
+    Unit() = default;
+protected:
     int _hp, _damage, _armor,
-    _cost, _range, _x, _y;
+            _cost, _range, _x, _y;
 };
+
+
 
 void Unit::TakeDamage(int damage)
 {
@@ -57,7 +61,7 @@ bool Unit::GetY() const
 bool Unit::IsReachable(Unit &enemy) const
 {
     int dx = std::abs(_x - enemy.GetX()),
-        dy = std::abs(_y - enemy.GetY());
+            dy = std::abs(_y - enemy.GetY());
     return _range >= std::round(std::sqrt(dx*dx + dy*dy) - 0.5);
 }
 
@@ -97,35 +101,65 @@ private:
 class HumanInfantry : public Infantry
 {
 public:
+    explicit HumanInfantry(int x=0, int y=0) {
+        _hp = 100;
+        _damage = 50;
+        _armor = 20;
+        _cost = 10;
+        _range = 1;
+        _x = x;
+        _y = y;
+    }
+
+    void Show() final {
+        std::cout << "I am human soldier" << std::endl;
+    }
 private:
 };
 
 class HumanArcher : public Archer
 {
 public:
+    void Show() final {
+        std::cout << "I am human archer" << std::endl;
+    }
 private:
 };
 
 class HumanMagician : public Magician
 {
 public:
+    void Show() final {
+        std::cout << "I am human magician" << std::endl;
+    }
 private:
 };
 
 class OrcInfantry : public Infantry
 {
 public:
+    void Show() final {
+        std::cout << "I am orc soldier" << std::endl;
+    }
 private:
 };
 
 class OrcArcher : public Archer
 {
 public:
+    void Show() final {
+        std::cout << "I am orc archer" << std::endl;
+    }
 private:
 };
 
 class OrcMagician : public Magician
 {
 public:
+    void Show() final {
+        std::cout << "I am orc magician" << std::endl;
+    }
 private:
 };
+
+#endif //STRATEGYGAME_UNIT_H

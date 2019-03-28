@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/StrategyGame.dir/main.cpp.o"
-  "CMakeFiles/StrategyGame.dir/Factory.cpp.o"
-  "CMakeFiles/StrategyGame.dir/Unit.cpp.o"
-  "CMakeFiles/StrategyGame.dir/Player.cpp.o"
   "StrategyGame.pdb"
   "StrategyGame"
 )
