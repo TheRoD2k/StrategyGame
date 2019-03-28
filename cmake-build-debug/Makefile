@@ -245,7 +245,6 @@ help:
 	@echo "... Factory.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
-	@echo "... Player.s"
 	@echo "... Unit.o"
 	@echo "... Unit.i"
 	@echo "... Unit.s"
