@@ -48,10 +48,10 @@ RM = /home/frozenice/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remov
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/frozenice/Projects/StrategyGame
+CMAKE_SOURCE_DIR = /home/frozenice/Desktop/Repo/StrategyGame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/frozenice/Projects/StrategyGame/cmake-build-debug
+CMAKE_BINARY_DIR = /home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frozenice/Projects/StrategyGame/cmake-build-debug/CMakeFiles /home/frozenice/Projects/StrategyGame/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles /home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frozenice/Projects/StrategyGame/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frozenice/Desktop/Repo/StrategyGame/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ StrategyGame/fast:
 	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/build
 .PHONY : StrategyGame/fast
 
+Unit.o: Unit.cpp.o
+
+.PHONY : Unit.o
+
+# target to build an object file
+Unit.cpp.o:
+	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.o
+.PHONY : Unit.cpp.o
+
+Unit.i: Unit.cpp.i
+
+.PHONY : Unit.i
+
+# target to preprocess a source file
+Unit.cpp.i:
+	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.i
+.PHONY : Unit.cpp.i
+
+Unit.s: Unit.cpp.s
+
+.PHONY : Unit.s
+
+# target to generate assembly for a file
+Unit.cpp.s:
+	$(MAKE) -f CMakeFiles/StrategyGame.dir/build.make CMakeFiles/StrategyGame.dir/Unit.cpp.s
+.PHONY : Unit.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... StrategyGame"
 	@echo "... edit_cache"
+	@echo "... Unit.o"
+	@echo "... Unit.i"
+	@echo "... Unit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
