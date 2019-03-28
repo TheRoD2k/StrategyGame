@@ -6,9 +6,5 @@
 
 int main()
 {
-    World Map(20,50);
-    Map.Set(new HumanArcher(), 2, 2);
-    Map.Print();
-
     return 0;
 }

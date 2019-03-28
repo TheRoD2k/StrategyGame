@@ -16,7 +16,15 @@ public:
     void AddArcher(ArmyFactory& factory);
     void AddMagician(ArmyFactory& factory);
 
+
+    void ShowUnits();
 };
+
+void Army::ShowUnits() {
+    for (int i = 0; i < _units.size(); ++i) {
+        _units[i] ->Show();
+    }
+}
 
 // Добавляем юнитов в армию
 

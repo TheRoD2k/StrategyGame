@@ -10,8 +10,6 @@
 class Unit
 {
 public:
-    virtual ~Unit() = default;
-
     void TakeDamage(int damage);    // Получить урон с учетом брони
     int GetDamage() const;  // Показывает, сколько урона наносит юнит
     bool IsAlive() const;
@@ -20,7 +18,9 @@ public:
     bool IsReachable(Unit &enemy) const;   // True, если на расстоянии атаки
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
-private:
+    virtual void Show() = 0;
+    Unit() = default;
+protected:
     int _hp, _damage, _armor,
             _cost, _range, _x, _y;
 };
@@ -99,36 +99,64 @@ private:
 class HumanInfantry : public Infantry
 {
 public:
+    explicit HumanInfantry(int x=0, int y=0) {
+        _hp = 100;
+        _damage = 50;
+        _armor = 20;
+        _cost = 10;
+        _range = 1;
+        _x = x;
+        _y = y;
+    }
+
+    void Show() final {
+        std::cout << "I am human soldier" << std::endl;
+    }
 private:
 };
 
 class HumanArcher : public Archer
 {
 public:
+    void Show() final {
+        std::cout << "I am human archer" << std::endl;
+    }
 private:
 };
 
 class HumanMagician : public Magician
 {
 public:
+    void Show() final {
+        std::cout << "I am human magician" << std::endl;
+    }
 private:
 };
 
 class OrcInfantry : public Infantry
 {
 public:
+    void Show() final {
+        std::cout << "I am orc soldier" << std::endl;
+    }
 private:
 };
 
 class OrcArcher : public Archer
 {
 public:
+    void Show() final {
+        std::cout << "I am orc archer" << std::endl;
+    }
 private:
 };
 
 class OrcMagician : public Magician
 {
 public:
+    void Show() final {
+        std::cout << "I am orc magician" << std::endl;
+    }
 private:
 };
 
