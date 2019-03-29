@@ -1,23 +1,18 @@
 #include <iostream>
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include "Player.h"
 #include "Army.h"
 #include "Map.h"
 #include "Unit.h"
 
+TEST(CreateUnit, HumanUnit) {
+    Unit* unit = new HumanInfantry();
+    ASSERT_TRUE(unit->Show() == "I am human soldier");
+}
+
+
 int main()
 {
-    World* game_map = new World(10, 10);
-    Player player1(game_map, "human");
-    player1.AddFactory();
-    try
-    {
-        player1.AddUnit(*player1.GetFactory(), "infantry");
-    }
-    catch (int e) {
-        if (e == 1) {
-            std::cout << "No such a factory" << std::endl;
-        }
-    }
-    game_map->Print();
-    return 0;
+    return RUN_ALL_TESTS();
 }

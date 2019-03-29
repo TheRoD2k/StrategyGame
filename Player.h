@@ -46,10 +46,6 @@ public:
 
     ArmyFactory* GetFactory(int);
 
-    void RemoveUnit(int unit_id=0);
-
-    void RemoveFactory(int factory_id=0);
-
 };
 
 ArmyFactory* Player::GetFactory(int number=0) {

@@ -18,7 +18,7 @@ public:
     bool IsReachable(Unit &enemy) const;   // True, если на расстоянии атаки
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
-    virtual void Show() = 0;
+    virtual std::string Show() = 0;
 protected:
     Unit() = default;
     int _hp, _damage, _armor,
@@ -109,8 +109,8 @@ public:
         _y = y;
     }
 
-    void Show() final {
-        std::cout << "I am human soldier" << std::endl;
+    std::string Show() final {
+        return "I am human soldier";
     }
 private:
 };
@@ -118,8 +118,8 @@ private:
 class HumanArcher : public Archer
 {
 public:
-    void Show() final {
-        std::cout << "I am human archer" << std::endl;
+    std::string Show() final {
+        return "I am human archer";
     }
 private:
 };
@@ -127,8 +127,8 @@ private:
 class HumanMagician : public Magician
 {
 public:
-    void Show() final {
-        std::cout << "I am human magician" << std::endl;
+    std::string Show() final {
+        return "I am human magician";
     }
 private:
 };
@@ -136,8 +136,8 @@ private:
 class OrcInfantry : public Infantry
 {
 public:
-    void Show() final {
-        std::cout << "I am orc soldier" << std::endl;
+    std::string Show() final {
+        return "I am orc soldier";
     }
 private:
 };
@@ -145,8 +145,8 @@ private:
 class OrcArcher : public Archer
 {
 public:
-    void Show() final {
-        std::cout << "I am orc archer" << std::endl;
+    std::string Show() final {
+        return "I am orc archer";
     }
 private:
 };
@@ -154,8 +154,8 @@ private:
 class OrcMagician : public Magician
 {
 public:
-    void Show() final {
-        std::cout << "I am orc magician" << std::endl;
+    std::string Show() final {
+        return "I am orc magician";
     }
 private:
 };
