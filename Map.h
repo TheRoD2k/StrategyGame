@@ -36,7 +36,7 @@ public:
     void Set(Unit* Un, int x, int y);
     void UnSet(int x,int y);
     void Print();
-    void ShowCell(int x, int y);
+    std::string ShowCell(int x, int y);
 private:
     std::vector<std::vector<ArmyFactory*>> _factory_map;
     std::vector<std::vector<Unit*>> _unit_map;
@@ -90,21 +90,19 @@ void World::Print()
     std::cout << std::endl;
 }
 
-void World::ShowCell(int x, int y)
+std::string World::ShowCell(int x, int y)
 {
     if (_factory_map[x][y] != nullptr)
     {
-        _factory_map[x][y]->Show();
-        return;
+        return _factory_map[x][y]->Show();
     }
 
     if (_unit_map[x][y] != nullptr)
     {
-        _unit_map[x][y]->Show();
-        return;
+        return _unit_map[x][y]->Show();
     }
 
-    std::cout << "Cell is empty" << std::endl;
+    return  "Cell is empty";
 }
 
 #endif //STRATEGYGAME_MAP_H

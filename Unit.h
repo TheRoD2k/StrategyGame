@@ -19,6 +19,8 @@ public:
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
     virtual std::string Show() = 0;
+    virtual ~Unit() = default;
+
 protected:
     Unit() = default;
     int _hp, _damage, _armor,
@@ -112,6 +114,8 @@ public:
     std::string Show() final {
         return "I am human soldier";
     }
+
+
 private:
 };
 
@@ -121,6 +125,7 @@ public:
     std::string Show() final {
         return "I am human archer";
     }
+
 private:
 };
 
@@ -130,6 +135,7 @@ public:
     std::string Show() final {
         return "I am human magician";
     }
+
 private:
 };
 
