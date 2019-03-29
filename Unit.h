@@ -19,8 +19,8 @@ public:
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
     virtual void Show() = 0;
-    Unit() = default;
 protected:
+    Unit() = default;
     int _hp, _damage, _armor,
             _cost, _range, _x, _y;
 };
