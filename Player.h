@@ -35,10 +35,15 @@ public:
         _army->SetMap(map);
     }
 
-    void Show() {
+    std::string ShowRace() {
+        return _race;
+    }
+
+    void ShowStats() {
         std::cout << _race << '\n' << _money << std::endl;
         _army ->ShowUnits();
     }
+
     // Действия с армией
     void AddUnit(ArmyFactory& factory, const std::string& unit_type);
 

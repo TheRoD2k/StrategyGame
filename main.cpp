@@ -68,6 +68,12 @@ TEST(MapTest, SetFactories) {
     ASSERT_TRUE(map->ShowCell(4, 5) == "OrcArmyFactory");
 }
 
+TEST(PlayerTest, CreatePlayer) {
+    World* map = new World(10, 10);
+    Player player(map, "human");
+    ASSERT_TRUE(player.ShowRace() == "human");
+}
+
 int main(int argc, char** argv)
 {
     testing::InitGoogleTest(&argc, argv);
