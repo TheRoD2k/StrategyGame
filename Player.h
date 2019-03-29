@@ -10,16 +10,19 @@
 #include <typeinfo>
 #include "Factory.h"
 #include "Army.h"
+#include "Map.h"
 
 // Храним данные игрока
 class Player {
 private:
+    World* _map;
     std::string _race;
     std::vector<ArmyFactory*> _factories;
     Army* _army;
     int _money;
 public:
-    explicit Player(const std::string& race, int money=0) {
+    Player(World* map, const std::string& race, int money=0) {
+        _map = map;
         _race = race;
         _money = money;
         _factories = {};
@@ -29,6 +32,7 @@ public:
         else {
             _army = new OrcArmy();
         }
+        _army->SetMap(map);
     }
 
     void Show() {
@@ -63,6 +67,7 @@ void Player::AddFactory() {
     else
         factory = new OrcArmyFactory;
     _factories.push_back(factory);
+    _map ->Set(factory, 0, 0);
 }
 
 #endif //STRATEGYGAME_PLAYER_H
