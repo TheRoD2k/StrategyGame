@@ -10,14 +10,16 @@
 
 class ArmyFactory {
 protected:
-    int _x;
-    int _y;
-    int _cost;
+    int _x = 0;
+    int _y = 0;
+    int _cost = 100;
 public:
+    ArmyFactory() = default;
     virtual Infantry* CreateInfantry() = 0;
     virtual Archer* CreateArcher() = 0;
     virtual Magician* CreateMagician() = 0;
-    virtual void Show() = 0;
+    virtual std::string Show() = 0;
+    virtual ~ArmyFactory() = default;
 
 };
 
@@ -29,8 +31,8 @@ public:
         _cost = cost;
     }
 
-    void Show() final {
-        std::cout << "HumanArmyFactory" << std::endl;
+    std::string Show() final {
+        return "HumanArmyFactory";
     }
 
     Archer* CreateArcher() final {
@@ -57,8 +59,8 @@ public:
         _cost = cost;
     }
 
-    void Show() final {
-        std::cout << "OrcArmyFactory" << std::endl;
+    std::string Show() final {
+        return  "OrcArmyFactory";
     }
 
     Archer* CreateArcher() final {
