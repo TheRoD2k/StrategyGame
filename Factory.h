@@ -17,6 +17,7 @@ public:
     virtual Infantry* CreateInfantry() = 0;
     virtual Archer* CreateArcher() = 0;
     virtual Magician* CreateMagician() = 0;
+    virtual void Show() = 0;
 
 };
 
@@ -26,6 +27,10 @@ public:
         _x = x;
         _y = y;
         _cost = cost;
+    }
+
+    void Show() final {
+        std::cout << "HumanArmyFactory" << std::endl;
     }
 
     Archer* CreateArcher() final {
@@ -46,6 +51,16 @@ public:
 
 class OrcArmyFactory: public ArmyFactory {
 public:
+    explicit OrcArmyFactory(int x=0, int y=0, int cost=0) {
+        _x = x;
+        _y = y;
+        _cost = cost;
+    }
+
+    void Show() final {
+        std::cout << "OrcArmyFactory" << std::endl;
+    }
+
     Archer* CreateArcher() final {
         auto* unit = new OrcArcher();
         return unit;

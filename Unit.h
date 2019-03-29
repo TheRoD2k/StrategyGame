@@ -10,7 +10,6 @@
 class Unit
 {
 public:
-
     void TakeDamage(int damage);    // Получить урон с учетом брони
     int GetDamage() const;  // Показывает, сколько урона наносит юнит
     bool IsAlive() const;
@@ -20,12 +19,11 @@ public:
     void Attack(Unit &enemy) const; // Атака с проверкой достижимости
     int GetPrice() const;
     virtual void Show() = 0;
-    Unit() = default;
 protected:
+    Unit() = default;
     int _hp, _damage, _armor,
             _cost, _range, _x, _y;
 };
-
 
 
 void Unit::TakeDamage(int damage)

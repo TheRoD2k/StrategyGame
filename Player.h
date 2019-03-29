@@ -10,16 +10,19 @@
 #include <typeinfo>
 #include "Factory.h"
 #include "Army.h"
+#include "Map.h"
 
 // Храним данные игрока
 class Player {
 private:
+    World* _map;
     std::string _race;
     std::vector<ArmyFactory*> _factories;
     Army* _army;
     int _money;
 public:
-    explicit Player(const std::string& race, int money=0) {
+    Player(World* map, const std::string& race, int money=0) {
+        _map = map;
         _race = race;
         _money = money;
         _factories = {};
@@ -29,6 +32,7 @@ public:
         else {
             _army = new OrcArmy();
         }
+        _army->SetMap(map);
     }
 
     void Show() {
@@ -38,13 +42,21 @@ public:
     // Действия с армией
     void AddUnit(ArmyFactory& factory, const std::string& unit_type);
 
-    void AddFactory();
+    void AddFactory(int, int);
+
+    ArmyFactory* GetFactory(int);
 
     void RemoveUnit(int unit_id=0);
 
     void RemoveFactory(int factory_id=0);
 
 };
+
+ArmyFactory* Player::GetFactory(int number=0) {
+    if (_factories.size() <= number)
+        throw 1;
+    return _factories[number];
+}
 
 void Player::AddUnit(ArmyFactory &factory, const std::string& unit_type) {
     if (unit_type == "infantry")
@@ -55,13 +67,14 @@ void Player::AddUnit(ArmyFactory &factory, const std::string& unit_type) {
         _army ->AddMagician(factory);
 }
 
-void Player::AddFactory() {
+void Player::AddFactory(int x=0, int y=0) {
     ArmyFactory* factory;
     if (_race == "human")
         factory = new HumanArmyFactory;
     else
         factory = new OrcArmyFactory;
     _factories.push_back(factory);
+    _map ->Set(factory, x, y);
 }
 
 #endif //STRATEGYGAME_PLAYER_H
